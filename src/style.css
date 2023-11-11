@@ -1,0 +1,19 @@
+button {
+    cursor: pointer;
+}
+
+.actionbutton {
+    background-color: red;
+    color: white;
+    margin-left: 20px;
+}
+
+.listbutton {
+    height: 25px;
+    border: none;
+    background: none;    
+}
+
+li {
+    list-style-type: none;
+}
