@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { getMovie } from "../api";
 import { useQuery } from "react-query";
 import { Link, useParams } from "react-router-dom";
@@ -23,7 +23,9 @@ const MovieDetails = (props) => {
   return (
     <>
       <h1>Movie Details </h1>
+      <Suspense fallback={<h1>Building list</h1>}>
       <Link to={`/movies/${id}/reviewers`}>See reviewers</Link>
+      </Suspense>
       <pre>{JSON.stringify(movie, null, 2)}</pre>;
     </>
   );
